@@ -6,15 +6,15 @@ IntVector *int_vector_new(size_t initial_capacity) //Создает массив
 {
 	IntVector *a = malloc (sizeof(IntVector));
 	
-	if (a == NULL) {fdsfsd
+	if (a == NULL) {
 		printf ("\nStruct (a) was not created\n ");
 		return NULL;
-	}fsdfsd
+	}
 	a->capacity = initial_capacity;
 	
 	a->mas = calloc(a->capacity , sizeof(int));
 	
-	if (a->mas == NULL) {fsdf
+	if (a->mas == NULL) {
 		printf ("\nArray was not created\n");
 		return NULL;
 	}
@@ -22,12 +22,6 @@ IntVector *int_vector_new(size_t initial_capacity) //Создает массив
 	printf ("\nVector was created, capacity = %ld\n", initial_capacity);
 	return a;
 }
-
-fsdfsd
-fdsfsd
-fdsgdfgre
-gdfsg
-
 
 IntVector *int_vector_copy(const IntVector *v)
 {
@@ -43,7 +37,7 @@ IntVector *int_vector_copy(const IntVector *v)
 	if ( a -> mas == NULL ) {
 	printf ("\nError\n");
 	return NULL;
-	}fsdfds
+	}
 	
 	for ( size_t i = 0; i < (v -> size); i++ ) {
 	a -> mas [i] = v -> mas [i];
@@ -55,7 +49,7 @@ IntVector *int_vector_copy(const IntVector *v)
 }
 
 void int_vector_free(IntVector **v)
-{fsdfsd
+{
 	free ((*v)->mas);
 	free (*v);
 	*v = NULL;
@@ -67,7 +61,7 @@ int int_vector_get_item(const IntVector *v, size_t index)
     if(index-1 > v->size){
 		printf(" index > size\n");
 		return 0;
-	}fsdfd
+	}
     return v->mas[index-1];
 }
 
@@ -83,7 +77,7 @@ void int_vector_set_item(const IntVector *v, size_t index, int item)
 size_t int_vector_get_size(const IntVector *v)
 {
     return v->size;
-}fsdfs
+}
 
 size_t int_vector_get_capacity(const IntVector *v)
 {

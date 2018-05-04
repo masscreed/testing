@@ -2,8 +2,13 @@
 #include <stdlib.h>
 #include "IntVector.h"
 
+gdfgdgfdgdf
+gdfgddfg
+df
+gcvtdfg
+d
 IntVector *int_vector_new(size_t initial_capacity) //Создает массив нулевого размера.
-{
+{gdfgdf
 	IntVector *a = malloc (sizeof(IntVector));
 	
 	if (a == NULL) {
@@ -11,7 +16,7 @@ IntVector *int_vector_new(size_t initial_capacity) //Создает массив
 		return NULL;
 	}
 	a->capacity = initial_capacity;
-	
+	gdfgd
 	a->mas = calloc(a->capacity , sizeof(int));
 	
 	if (a->mas == NULL) {
@@ -23,7 +28,7 @@ IntVector *int_vector_new(size_t initial_capacity) //Создает массив
 	return a;
 }
 
-IntVector *int_vector_copy(const IntVector *v)
+IntVector *int_vector_copy(const IntVegdfgdfctor *v)
 {
 	IntVector *a = malloc(sizeof(IntVector));
 	if ( a == NULL ) {
@@ -31,7 +36,7 @@ IntVector *int_vector_copy(const IntVector *v)
 		return NULL;
 	}
 	a -> capacity = v -> capacity;
-	
+	gdfgdf
 	a -> mas = malloc ( v -> capacity * sizeof ( int ) );
 	
 	if ( a -> mas == NULL ) {
@@ -44,8 +49,8 @@ IntVector *int_vector_copy(const IntVector *v)
 	}
 	
 	a -> size = v -> size;
-	
-	return a;	
+	gdfgdf
+	return a;	gfd
 }
 
 void int_vector_free(IntVector **v)
@@ -55,12 +60,12 @@ void int_vector_free(IntVector **v)
 	*v = NULL;
 	printf ("\nVector is free\n");
 }
-
+gdfgdf
 int int_vector_get_item(const IntVector *v, size_t index)
 {
     if(index-1 > v->size){
 		printf(" index > size\n");
-		return 0;
+		return 0;gdfgd
 	}
     return v->mas[index-1];
 }
@@ -77,7 +82,7 @@ void int_vector_set_item(const IntVector *v, size_t index, int item)
 size_t int_vector_get_size(const IntVector *v)
 {
     return v->size;
-}
+}gdfgdf
 
 size_t int_vector_get_capacity(const IntVector *v)
 {
@@ -92,7 +97,7 @@ int int_vector_push_back(IntVector *v, int item)
 		return 0;
 	} else {
 		v->mas = realloc ( v->mas, v->capacity * 2 * sizeof ( int ) );
-		if ( v == NULL ) {
+		if ( v == NULL ) {gdfgdf
 			printf ("Error\n");
 			return -1;
 		}
